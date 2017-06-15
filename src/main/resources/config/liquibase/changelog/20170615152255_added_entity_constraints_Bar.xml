@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Bar.
+    -->
+    <changeSet id="20170615152255-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="firstcarte_id"
+                                 baseTableName="bar"
+                                 constraintName="fk_bar_firstcarte_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="carte"/>
+
+    </changeSet>
+</databaseChangeLog>

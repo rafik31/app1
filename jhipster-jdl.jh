@@ -1,0 +1,20 @@
+entity Bar {
+	barName String,
+    barAddress String,
+    categoryBar String
+}
+
+entity Carte {
+	drink1 String,
+    drink2 String,
+    drink3 String
+}
+
+entity Client {
+	name String
+}
+
+relationship OneToOne {
+	Bar{firstcarte} to Carte
+}
+

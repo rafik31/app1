@@ -1,0 +1,23 @@
+{
+    "app1App": {
+        "carte" : {
+            "home": {
+                "title": "Cartes",
+                "createLabel": "Create a new Carte",
+                "createOrEditLabel": "Create or edit a Carte"
+            },
+            "created": "A new Carte is created with identifier {{ param }}",
+            "updated": "A Carte is updated with identifier {{ param }}",
+            "deleted": "A Carte is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Carte {{ id }}?"
+            },
+            "detail": {
+                "title": "Carte"
+            },
+            "drink1": "Drink 1",
+            "drink2": "Drink 2",
+            "drink3": "Drink 3"
+        }
+    }
+}

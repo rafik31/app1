@@ -1,0 +1,33 @@
+
+<div *ngIf="carte">
+    <h2><span jhiTranslate="app1App.carte.detail.title">Carte</span> {{carte.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="app1App.carte.drink1">Drink 1</span></dt>
+        <dd>
+            <span>{{carte.drink1}}</span>
+        </dd>
+        <dt><span jhiTranslate="app1App.carte.drink2">Drink 2</span></dt>
+        <dd>
+            <span>{{carte.drink2}}</span>
+        </dd>
+        <dt><span jhiTranslate="app1App.carte.drink3">Drink 3</span></dt>
+        <dd>
+            <span>{{carte.drink3}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'carte/'+ carte.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

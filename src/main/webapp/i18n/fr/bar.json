@@ -1,0 +1,24 @@
+{
+    "app1App": {
+        "bar" : {
+            "home": {
+                "title": "Bars",
+                "createLabel": "Créer un nouveau Bar",
+                "createOrEditLabel": "Créer ou éditer un Bar"
+            },
+            "created": "Un nouveau Bar a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Bar avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Bar avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Bar {{ id }} ?"
+            },
+            "detail": {
+                "title": "Bar"
+            },
+            "barName": "Bar Name",
+            "barAddress": "Bar Address",
+            "categoryBar": "Category Bar",
+            "firstcarte": "Firstcarte"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "app1App": {
+        "carte" : {
+            "home": {
+                "title": "Cartes",
+                "createLabel": "Créer un nouveau Carte",
+                "createOrEditLabel": "Créer ou éditer un Carte"
+            },
+            "created": "Un nouveau Carte a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Carte avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Carte avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Carte {{ id }} ?"
+            },
+            "detail": {
+                "title": "Carte"
+            },
+            "drink1": "Drink 1",
+            "drink2": "Drink 2",
+            "drink3": "Drink 3"
+        }
+    }
+}

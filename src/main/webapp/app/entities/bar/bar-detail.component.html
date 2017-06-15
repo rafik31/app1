@@ -1,0 +1,39 @@
+
+<div *ngIf="bar">
+    <h2><span jhiTranslate="app1App.bar.detail.title">Bar</span> {{bar.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="app1App.bar.barName">Bar Name</span></dt>
+        <dd>
+            <span>{{bar.barName}}</span>
+        </dd>
+        <dt><span jhiTranslate="app1App.bar.barAddress">Bar Address</span></dt>
+        <dd>
+            <span>{{bar.barAddress}}</span>
+        </dd>
+        <dt><span jhiTranslate="app1App.bar.categoryBar">Category Bar</span></dt>
+        <dd>
+            <span>{{bar.categoryBar}}</span>
+        </dd>
+        <dt><span jhiTranslate="app1App.bar.firstcarte">Firstcarte</span></dt>
+        <dd>
+            <div *ngIf="bar.firstcarte">
+                <a [routerLink]="['/carte', bar.firstcarte?.id]">{{bar.firstcarte?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'bar/'+ bar.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

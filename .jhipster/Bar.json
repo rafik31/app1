@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "firstcarte",
+            "otherEntityName": "carte",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bar"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "barName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "barAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categoryBar",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170615152255",
+    "entityTableName": "bar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

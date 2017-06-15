@@ -1,0 +1,66 @@
+<div>
+    <h2>
+        <span jhiTranslate="app1App.bar.home.title">Bars</span>
+        <button class="btn btn-primary float-right create-bar" [routerLink]="['/', { outlets: { popup: ['bar-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="app1App.bar.home.createLabel">
+            Create new Bar
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="bars">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="app1App.bar.barName">Bar Name</span></th>
+            <th><span jhiTranslate="app1App.bar.barAddress">Bar Address</span></th>
+            <th><span jhiTranslate="app1App.bar.categoryBar">Category Bar</span></th>
+            <th><span jhiTranslate="app1App.bar.firstcarte">Firstcarte</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let bar of bars ;trackBy: trackId">
+                <td><a [routerLink]="['../bar', bar.id ]">{{bar.id}}</a></td>
+                <td>{{bar.barName}}</td>
+                <td>{{bar.barAddress}}</td>
+                <td>{{bar.categoryBar}}</td>
+                <td>
+                    <div *ngIf="bar.firstcarte">
+                        <a [routerLink]="['../carte', bar.firstcarte?.id ]" >{{bar.firstcarte?.drink1}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../bar', bar.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bar/'+ bar.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bar/'+ bar.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
